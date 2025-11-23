@@ -144,8 +144,15 @@ input:focus::placeholder{
 }
 .left{
     position: relative;
-    overflow:scroll;
+    overflow-x:scroll;
 }
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar{
+    padding: 1px;
+}
+
 .left .loc{
     overflow: hidden;
     font-size: 60px;
