@@ -6,8 +6,6 @@ let city = document.getElementById('cityinput')
 let btn = document.getElementById('btn')
 let heading = document.getElementById('weather')
 let body =  document.getElementsByTagName('body')[0];
-let temps = document.getElementById('temp')
-let weicon = document.getElementById('icon')
 let logo = document.getElementById('logo')
 let lat;
 let long;
@@ -24,6 +22,8 @@ let mintemp;
 let uv;
 let weather;
 let code;
+let gif;
+let climateicon;
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const weathercondition = ['Clear', 'Mist', 'Drizzle', 'Sandstorm', 'Fog', 'Drizzle', 'Rain', 'Snow', 'Intermediate Rain', 'Heavy Rain']
 // const weathericon = ['weathericon/clear.png','weathericon/mist.png','weathericon/drizzle.png','weathericon/sand.png','weathericon/fog.png','weathericon/drizzle.png','weathericon/rain.png','weathericon/snow.png','weathericon/inter.png','anime/heavy.gif']
@@ -94,9 +94,7 @@ function getweather() {
     })
 }
 function icons() {
-    weicon.classList.remove('disable')
-    weicon.classList.add('icons')
-    weicon.style.backgroundImage = `url('${weathericon[code]}')`
+    climateicon = `${weathericon[code]}`
     let len = (back.length)-1;
     console.log(`len:${len}`);
         let rand = Math.floor(Math.random() * len)
@@ -113,19 +111,22 @@ function display() {
 
     icons()
     let coma = ','
-    let isnot = false;
     if (state == null) {
         state = ''
         coma = ''
     }
+    let a = city.value.toUpperCase();
+    let b = state.toUpperCase();
+    if (a == b) {
+        state = ''
+        coma = ''  
+    }
     if (temp > 28) {
-        temps.classList.remove('disable')
-        temps.classList.add('hot')
+        gif = 'anime/hot.gif'
     } else if (temp < 16) {
-        temps.classList.remove('disable')
-        temps.classList.add('cold')
+        gif = 'anime/cold.gif'
     } else {
-        temps.classList.remove('disable')
+    gif = 'disable'
         
     }
     heading.style.cursor = 'pointer'
@@ -133,10 +134,11 @@ function display() {
 
     <div class = 'card'>
     <div class = 'left'>
-    <h2 class = 'loc'>${city.value}${coma}${state}</h2>
-    <h2 class='temper'>${temp}&deg;C</h2>
+    <div class = 'loc'>${city.value}${coma}${state}</div>
+    <h2 class='temper'>${temp}&deg;C<img src="${gif}" class = "hot ${gif}">
+    </h2>
     <h4 class='date'>${date} | ${time}</h4>
-    <div class = "cloudicon"></div>
+    <img src="${climateicon}" class ="icons">
     </div>
     <div class = "right">
     <h3>weather : ${weather}</h3>
@@ -160,10 +162,6 @@ function resetall() {
     results.classList.add('disable')
     city.classList.remove('disable')
     btn.classList.remove('disable')
-    temps.classList.add('disable')
-    temps.classList.remove('hot')
-    temps.classList.remove('cold')
-    weicon.classList.remove('icons')
     city.value = ''
     body.style.backgroundImage = ``;
     logo.classList.add('fa-search')
