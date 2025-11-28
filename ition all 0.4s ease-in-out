@@ -1,0 +1,53 @@
+[33mcommit cf7cec9e775d4237841c5583d982d4c11428470a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Thu Nov 27 23:43:41 2025 +0530
+
+    transition improved
+
+[33mcommit ac7cb82d61203b9c9c65c107c59c45f6fe820a36[m[33m ([m[1;31mnew/main[m[33m)[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Thu Nov 27 21:21:42 2025 +0530
+
+    delete comments
+
+[33mcommit 40b44f7be4599625c77bf991f10e8c75a97d6af0[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Thu Nov 27 21:16:32 2025 +0530
+
+    some more optimization
+
+[33mcommit 8d2638fca95c621f0075b9b4a466c7dc6cd41988[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Thu Nov 27 21:09:06 2025 +0530
+
+    optimized all
+
+[33mcommit 5fadf2a49a2cb02f2d0ab38ec0954c2353074d94[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Tue Nov 25 00:06:52 2025 +0530
+
+    postion to flex and optimized
+
+[33mcommit d8f49f6761c7b8534ba0ae12b57ca0c9aa9ee679[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Sun Nov 23 22:02:49 2025 +0530
+
+    overflow scroll fix
+
+[33mcommit c32d69628bb77ca23e5fb4651c172d2757bb42b2[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Sun Nov 23 21:45:56 2025 +0530
+
+    slight responsive improvements
+
+[33mcommit 95cee99ef530a1a0f71767f833d1c161a22f1dc2[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Sun Nov 23 21:17:23 2025 +0530
+
+    rename to index
+
+[33mcommit d03937c950b7604bd36cc2b5994744bdcdfdb195[m
+Author: Aswin <gurudaskrishna123@gmail.com>
+Date:   Sun Nov 23 21:06:52 2025 +0530
+
+    initial commit
